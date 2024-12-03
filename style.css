@@ -1,0 +1,53 @@
+/* Contêiner do carrossel */
+.carousel-container {
+    overflow: hidden;
+    margin-left: 100px;
+    margin-right: 100px; 
+    border-radius: 10px; 
+    margin-top: 20px;
+  }
+  
+  /* Itens do carrossel */
+  .carousel-item {
+
+    width: px;  /* Defina a largura desejada dos itens */
+    height: 400px; /* Defina a altura dos itens */
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites do item */
+    position: relative;
+    border-radius: 10px; /* Borda arredondada (opcional) */
+  }
+  
+  /* Imagens dentro do carrossel */
+  .carousel-item img {
+    width: 100%; /* A imagem ocupa toda a largura do item */
+    height: 100%; /* A imagem ocupa toda a altura do item */
+    border-radius: 10px; /* Opcional, se você quiser bordas arredondadas */
+  }
+
+.row {
+    overflow: hidden;
+    margin-left: 100px;
+    margin-right: 100px; 
+    border-radius: 10px; 
+    margin-top: 20px;
+}
+nav{
+    background: #bfa5c5;
+    
+
+}
+
+
+  body{
+  background: #e7e2e785; /* Gradiente de rosa para roxo */
+  height: 100vh; /* Preenche toda a altura da tela */
+  margin: 0;
+  }
+
+  .body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/Fundo/rosa_roxo.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
