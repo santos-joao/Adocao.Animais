@@ -39,15 +39,16 @@ nav{
 
 
   body{
-  background: #e7e2e785; /* Gradiente de rosa para roxo */
+
   height: 100vh; /* Preenche toda a altura da tela */
   margin: 0;
+  border-radius: 100000px;
   }
 
-  .body{
-    width: 100vw;
-    height: 100vh;
-    background-image: url(img/Fundo/rosa_roxo.jpeg);
-    background-size: 100%;
-    background-repeat: no-repeat;
+  .card-body{
+    background: #8d32a1;
+    color: #bfa5c5;
+    
+    
   }
+
