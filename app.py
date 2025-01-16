@@ -5,13 +5,13 @@ app = Flask(__name__)
 app.secret_key = 'chave_flask_super_secreta'  # Necessário para usar session
 
 db_config = {
-    'user': '',
-    'password': '',
-    'host': '',
-    'port': ,
-    'database': ''
+    'user': 'adocaonimais.mysql.database.azure.com',
+    'password': 'Aula@123',
+    'host': 'adocaonimais.mysql.database.azure.com',
+    'port': '3306' ,
+    'database': 'adocaonimais '
 }
-
+#senha banco: Aula@123
 @app.route('/')
 def index():
     return render_template('index.html')
