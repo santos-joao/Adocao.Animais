@@ -1,5 +1,5 @@
 /* Contêiner do carrossel */
-.carousel-container {
+.carousel-fluid {
     overflow: hidden;
     margin-left: 100px;
     margin-right: 100px; 
@@ -30,12 +30,16 @@
     margin-right: 100px; 
     border-radius: 10px; 
     margin-top: 20px;
+    text-align: center;
 }
 nav{
     background: #bfa5c5;
-    
-
 }
+
+.navbar img {
+  width: 100px; /* Ajuste o tamanho conforme necessário */
+}
+
 
 
   body{
@@ -51,4 +55,6 @@ nav{
     
     
   }
+
+
 
