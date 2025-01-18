@@ -98,3 +98,18 @@ def logout():
     session.pop('usuario_logado', None)
     # Redireciona para a página inicial (index)
     return redirect(url_for('index'))
+
+@app.route('/adotar')
+def adotar():
+    return render_template('adotar.html')
+
+@app.route('/blog')
+def blog():
+    # Redireciona para a página inicial (index)
+    return render_template('blog.html')
+
+
+@app.route('/parceiros')
+def parceiros():
+    # Redireciona para a página inicial (index)
+    return render_template('parceiros.html')

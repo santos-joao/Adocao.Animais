@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark is-navbar-dark w-100 shadow-sm">
         <div class="container px-0" >
-            <b><a class="navbar-brand" href="./index.html"><img src="./assets/images/geeksuilogo.svg" style="color: #300d41;"    alt="Achei um Amigo"></a></b>
+            <b><a class="navbar-brand" href="{{ url_for('login') }}"><img src="./assets/images/geeksuilogo.svg" style="color: #300d41;"    alt="Achei um Amigo"></a></b>
             <!-- Button -->
             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon-bar top-bar mt-0"></span>
@@ -22,16 +22,13 @@
             <div class="collapse navbar-collapse" id="navbar-default" >
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <b><a class="nav-link" href="adotar.html" style="color: #030000;" >Quero adotar</a></b>
+                        <b><a class="nav-link" href="{{ url_for('login') }}" style="color: #030000;" >Quero adotar</a></b>
                     </li>
                     <li class="nav-item">
-                        <b><a class="nav-link" href="divulgar.html" style="color: #030000;" >Quero Divulgar</a></b>
+                        <b><a class="nav-link" href="/templates/blog.html" target="_blank" style="color: #030000;" >BLOG</a></b>
                     </li>
                     <li class="nav-item">
-                        <b><a class="nav-link" href="blog.html" target="_blank" style="color: #030000;" >BLOG</a></b>
-                    </li>
-                    <li class="nav-item">
-                        <b><a class="nav-link" href="parceiros.html" target="_blank" style="color: #030000;" >Como Ajudar</a></b>
+                        <b><a class="nav-link" href="/templates/parceiros.html" target="_blank" style="color: #030000;" >Como Ajudar</a></b>
                     </li>
                 </ul>
                 <div class="mt-3 mt-lg-0">
@@ -74,13 +71,14 @@
         <div class="card text-center">
         <img src="" class="card-img-top">
         <div class="card-body" >
-            <h5 class="card-title">Venha divulgue, tem alguém procurando um aumiguinho. </h5>
-            <br><br><a href="https://bit.ly/geeksui" target="_blank" title="Login">
+            <h5 class="card-title">Se Cadastre-se para nos adotar </h5>
+            <br><br><a href="{{ url_for('login') }}" class=" btn btn-sucess" style="background-color: rgb(231, 224, 236);"s target="_blank" title="Login">
               <i class="bi bi-cart-check-fill me-2"></i>
               Login</a>
-              <br><br><a href="https://bit.ly/geeksui" class="btn btn-primary" target="_blank" title="Cadastre-se">
+              <br><br><a href="{{ url_for('cadastro') }}" class="btn btn-primary" target="_blank" title="Cadastre-se">
               <i class="bi bi-cart-check-fill me-2"></i>
               Cadastre-se</a>
+
         </div>
         </div>
     </div>
@@ -89,7 +87,10 @@
         <div class="card text-center">
         <img src="" class="card-img-top">
         <div class="card-body" >
-            <h5 class="card-title">Divulgar com foto</h5>
+            <h5 class="card-title">Encotrei seu aumiguinho</h5>
+            <br><br><a href="/templates/adotar.html" class=" btn btn-sucess" style="background-color: rgb(243, 237, 247);"s target="_blank" title="Login">
+              <i class="bi bi-cart-check-fill me-2"></i>
+              Venha Adotar</a>
         </div>
         </div>
     </div>
