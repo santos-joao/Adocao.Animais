@@ -12,6 +12,7 @@ db_config = {
     'database': 'adocaonimais '
 }
 #senha banco: Aula@123
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -26,7 +27,7 @@ def cadastro():
         try:
             cnx = mysql.connector.connect(**db_config)
             cursor = cnx.cursor()
-            query = "INSERT INTO usuario_secretaria (usuario, senha) VALUES (%s, %s)"
+            query = "INSERT INTO usuario_secretaria (usuario, senha) VALUES (%s, %s)"  # mudar quando criarmos as chaves no banco
             cursor.execute(query, (usuario, senha))
             cnx.commit()
             cursor.close()
@@ -50,7 +51,7 @@ def login():
         try:
             cnx = mysql.connector.connect(**db_config)
             cursor = cnx.cursor()
-            query = "SELECT COUNT(*) FROM usuario_secretaria WHERE usuario=%s AND senha=%s"
+            query = "SELECT COUNT(*) FROM usuario_secretaria WHERE usuario=%s AND senha=%s"  # mudar quando criarmos as chaves no banco
             cursor.execute(query, (usuario, senha))
             result = cursor.fetchone()
             cursor.close()
@@ -70,26 +71,22 @@ def login():
         return render_template('login.html')
 
 @app.route('/home')
-def home():
+def user_home():
     if 'usuario_logado' in session:
         return f"Bem-vindo, {session['usuario_logado']}!"
     else:
         return redirect(url_for('login'))
-
-if __name__ == '__main__':
-    app.run(debug=True)
 
 # Rota para a página inicial do sistema
 @app.route('/home')
 def home():
     # Verifica se o usuário está logado na sessão
     if 'usuario_logado' not in session:
-        # Redireciona para a página de login se o usuário não estiver logado
-        return redirect(url_for('login'))
-    # Recupera o nome do usuário logado da sessão
-    usuario = session['usuario_logado']
-    # Renderiza o template 'home.html', passando o nome do usuário como variável
-    return render_template('home.html', usuario=usuario)
+        return redirect(url_for('login'))  # Redireciona para a página de login se o usuário não estiver logado    
+    
+    usuario = session['usuario_logado']  # Recupera o nome do usuário logado da sessão
+
+    return render_template('home.html', usuario=usuario) # Renderiza o template 'home.html', passando o nome do usuário como variável
 
 # Rota para fazer logout do sistema
 @app.route('/logout')
@@ -108,8 +105,11 @@ def blog():
     # Redireciona para a página inicial (index)
     return render_template('blog.html')
 
-
 @app.route('/parceiros')
 def parceiros():
     # Redireciona para a página inicial (index)
     return render_template('parceiros.html')
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
