@@ -9,8 +9,7 @@
   
   /* Itens do carrossel */
   .carousel-item {
-
-    width: px;  /* Defina a largura desejada dos itens */
+    width: 100%;  /* Defina a largura desejada dos itens */
     height: 400px; /* Defina a altura dos itens */
     overflow: hidden; /* Garante que a imagem não ultrapasse os limites do item */
     position: relative;
@@ -21,6 +20,7 @@
   .carousel-item img {
     width: 100%; /* A imagem ocupa toda a largura do item */
     height: 100%; /* A imagem ocupa toda a altura do item */
+    object-fit: contain;  /* isso aqui serve pra imagem caber certinho no carrossel, sem esticar. precisamos de imagens que sejam do mesmo tamanho */
     border-radius: 10px; /* Opcional, se você quiser bordas arredondadas */
   }
 
@@ -32,29 +32,110 @@
     margin-top: 20px;
     text-align: center;
 }
+
+/* navbar */
+/* lutei pra deixar bonitinho, não mexer */
 nav{
     background: #bfa5c5;
 }
 
 .navbar img {
-  width: 100px; /* Ajuste o tamanho conforme necessário */
+  width: 100px;
 }
 
+.navbar-nav {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 2;
+}
 
+.navbar-nav .nav-item .nav-link {
+  font-size: 1.5em;
+  color: white;
+  transition: color 0.3s ease, transform 0.3s ease; /* isso aqui é pra adicionar transição suave do efeito hover */
+}
 
-  body{
+.navbar-nav .nav-item .nav-link:hover {  /* efeito hover */
+  color: rgb(60, 30, 80);
+  transform: scale(1.1);
+}
 
+.navbar-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+}
+
+.navbar-links a {
+  margin-left: 30px;
+  font-size: 1.5em;
+}
+
+.no-underline {
+  text-decoration: none;
+  color: rgb(77, 42, 100);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.no-underline:hover {
+  color: rgb(60, 30, 80);
+  transform: scale(1.1);
+}
+
+.navbar-links .btn {
+  background-color: rgb(77, 42, 100);
+  color: white;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-links .btn:hover {
+  background-color: rgb(60, 30, 80);
+  transform: scale(1.1);
+}
+
+/* body */
+body{
   height: 100vh; /* Preenche toda a altura da tela */
   margin: 0;
   border-radius: 100000px;
-  }
+}
 
-  .card-body{
-    background: #bfa5c5;
-    color: #0c0c0c;
-    
-    
-  }
+/* cards */
+.card {
+  height: 500px;
+  text-align: center;
+}
 
+.card-body{
+  background: #bfa5c5;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding-top: 3rem;
+}
 
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 5rem;
+  color: rgb(77, 42, 100);
+  font-weight: bold;
+}
 
+.btn-custom {
+  background-color: rgb(77, 42, 100);
+  color: white;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-custom:hover {  /* efeito hover */
+  background-color: rgb(60, 30, 80);
+  color: white;
+}

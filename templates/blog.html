@@ -10,35 +10,38 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark is-navbar-dark w-100 shadow-sm">
-        <div class="container px-0" >
-            <b><a class="navbar-brand" href="/templates/index.html"><img src="./assets/images/geeksuilogo.svg" style="color: #300d41;"    alt="Achei um Amigo"></a></b>
-            <!-- Button -->
+        <div class="container px-0">
+
+            <b><a class="navbar-brand" href="{{ url_for('index') }}"><img src="/static/img/logo-projeto.png" alt="Achei um Amigo"></a></b>
+
+            <!-- pra que serve? -->
             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon-bar top-bar mt-0"></span>
                 <span class="icon-bar middle-bar"></span>
                 <span class="icon-bar bottom-bar"></span>
             </button>
-            <!-- Collapse -->
+
+            <!-- navbar -->
+            <!-- tudo funcionando, tudo de css tá no arquivo style.css pra ficar mais fácil de ler -->
             <div class="collapse navbar-collapse" id="navbar-default" >
+
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <b><a class="nav-link" href="/templates/adotar.html" style="color: #030000;" >Quero adotar</a></b>
+                        <b><a class="nav-link" href="{{ url_for('adotar') }}">Quero Adotar</a></b>
                     </li>
                     <li class="nav-item">
-                        <b><a class="nav-link" href="/templates/blog.html" target="_blank" style="color: #030000;" >BLOG</a></b>
+                        <b><a class="nav-link" href="{{ url_for('blog') }}">Blog</a></b>
                     </li>
                     <li class="nav-item">
-                        <b><a class="nav-link" href="/templates/parceiros.html" target="_blank" style="color: #030000;" >Como Ajudar</a></b>
+                        <b><a class="nav-link" href="{{ url_for('parceiros') }}">Como Ajudar</a></b>
                     </li>
                 </ul>
-                <div class="mt-3 mt-lg-0">
-                    <a href="{{ url_for('login') }}" target="_blank" title="Login" style="color: #030000;">
-                        <i class="bi bi-cart-check-fill me-2"></i><b>
-                        Login</b></a>
-                    <a href="{{ url_for('cadastro') }}" class="btn btn-primary " target="_blank" title="Cadastre-se" style="color: #630b7e;" >
-                        <i class="bi bi-cart-check-fill me-2" ></i><b>
-                        Cadastre-se</b></a>
+
+                <div class="navbar-links">
+                  <a href="{{ url_for('login') }}" class="no-underline" title="Login"><b>Login</b></a>
+                  <a href="{{ url_for('cadastro') }}" class="btn" title="Cadastre-se"><b>Cadastre-se</b></a>
                 </div>
+
             </div>
         </div>
     </nav>
