@@ -119,27 +119,29 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-3">           
-        <img src="static/img/LogoEmpresa.png " width="200"; margin-top='-30px' ; alt="Logo"><p class="tagline">Amigos de Pata é um programa criado para estreitar laços entre pessoas que têm o sonho de adotar um animalzinho e nossa ONG e protetores parceiros. Vamos juntos incentivar a adoção, conscientizar sobre a posse responsável e fomentar a cultura de doação em prol do bem-estar animais!</p>
+      <div class="col-2">           
+        <img src="static/img/LogoEmpresa.png " width="200"; margin-top='-40px' ; text-align="center"; alt="Logo">
       </div>
-
-      <div class="col-5">
+        <div class="col-5">           
+          <p class="tagline"; text-align="center">Amigos de Pata é um programa criado para estreitar laços entre pessoas que têm o sonho de adotar um animalzinho e nossa ONG e protetores parceiros. Vamos juntos incentivar a adoção, conscientizar sobre a posse responsável e fomentar a cultura de doação em prol do bem-estar animais!</p>
+        </div>
+      <div class="col-3">
         <ul class="nav justify-content-center">
           <li class="nav-item">
             <a class="nav-link" href="https://api.whatsapp.com/send?phone=2140028922" target="blank">
-              <img src="static/img/Logos/whatsapp.svg" alt="WhatsApp" width="30" height="24"> (21)99999-0000</a>
+              <img src="static/img/Logos/whatsapp.svg" alt="WhatsApp" width="30" height="24" id="Whatsapp"> (21)99999-0000</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://www.instagram.com/seu_perfil" target="blank">
-              <img src="static/img/Logos/instagram.svg" alt="Instagram" width="30" height="24">Ache um aumigo</a>
+            <a class="nav-link" href="https://www.instagram.com/seu_perfil" target="blank" >
+              <img src="static/img/Logos/instagram.svg" alt="Instagram" width="30" height="24" id="instagram">Ache um aumigo</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ url_for('parceiros') }}" target="blank">
-              <img src="static/img/Logos/Iconcoracao.svg" alt="WhatsApp" width="30" height="24">Como Ajudar</a>
+              <img src="static/img/Logos/Iconcoracao.svg" alt="Como ajudar" width="30" height="24" id="ComoAjudar">Como Ajudar</a>
           </li><br>
           <li class="nav-item">
             <a class="nav-link" href="{{ url_for('blog') }}" target="blank">
-              <img src="static/img/Logos/Blog.svg" alt="Instagram" width="30" height="24">Blog</a>
+              <img src="static/img/Logos/Blog.svg" alt="Instagram" width="30" height="24" id="Blog">Blog</a>
           </li>
         </div>
     </div>

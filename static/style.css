@@ -24,14 +24,6 @@
     border-radius: 10px; /* Opcional, se você quiser bordas arredondadas */
   }
 
-.row {
-    overflow: hidden;
-    margin-left: 100px;
-    margin-right: 100px; 
-    border-radius: 10px; 
-    margin-top: 20px;
-    text-align: center;
-}
 
 /* navbar */
 /* lutei pra deixar bonitinho, não mexer */
@@ -138,4 +130,83 @@ body{
 .btn-custom:hover {  /* efeito hover */
   background-color: rgb(60, 30, 80);
   color: white;
+}
+/* footer */
+footer {
+  background: #bfa5c5;
+  color: #080808;
+  text-align: center;
+}
+.row {
+  overflow: hidden;
+  margin-left: 100px;
+  margin-right: 100px; 
+  border-radius: 10px; 
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+footer .nav-link {
+  color:  rgb(60, 30, 80);
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  transition: color 0.3s ease, transform 0.3s ease; /* isso aqui é pra adicionar transição suave do efeito hover */
+}
+
+footer .nav-link:hover {  /* efeito hover */
+  color: rgb(77, 42, 100);
+  transform: scale(1.1);
+}
+
+footer .row {
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+#instagram {
+    width: 30px;
+    margin: 10px;
+    height:2rem;
+    width: 4rem;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #f09433 0%, #e6683c 33%, #dc2743 66%, #cc2366 100%);
+}
+
+
+#Whatsapp {
+  width: 30px;
+  margin: 10px;
+  height:2rem;
+  width: 4rem;
+border-radius: 50%;
+background-color: #25d366;
+}
+#ComoAjudar {
+  width: 30px;
+  margin: 10px;
+  height:2rem;
+  width: 4rem;
+border-radius: 50%;
+background-color: #dc2743;
+}
+#Blog{
+  width: 30px;
+  margin: 10px;
+  height:2rem;
+  width: 4rem;
+border-radius: 50%;
+background-color: rgb(114, 114, 240);
 }
