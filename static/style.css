@@ -211,3 +211,35 @@ border-radius: 50%;
 background-color: rgb(114, 114, 240);
 }
 
+
+.bg-light{
+ display: flex;
+ justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  font-size: 1.5rem;
+  padding: 30px 40px;
+  border-radius: 10px;
+  margin-top: 20px;
+  background: #bfa5c5;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #bfa5c5;
+  border-radius: 10px;
+  padding: 20px;
+  color: rgb(12, 12, 12);
+}
+
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
