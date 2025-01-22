@@ -45,6 +45,54 @@
             </div>
         </div>
     </nav>
-
+    
+<footer> 
+        <hr class="border border-primary border-2 opacity-80">
+      
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-2">           
+              <img src="static/img/LogoEmpresa.png " width="200"; margin-top='-40px' ; text-align="center"; alt="Logo">
+            </div>
+              <div class="col-5">           
+                <p class="tagline"; text-align="center">Amigos de Pata é um programa criado para estreitar laços entre pessoas que têm o sonho de adotar um animalzinho e nossa ONG e protetores parceiros. Vamos juntos incentivar a adoção, conscientizar sobre a posse responsável e fomentar a cultura de doação em prol do bem-estar animais!</p>
+              </div>
+            <div class="col-3">
+              <ul class="nav justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="https://api.whatsapp.com/send?phone=2140028922" target="blank">
+                    <img src="static/img/Logos/whatsapp.svg" alt="WhatsApp" width="30" height="24" id="Whatsapp"> (21)99999-0000</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.instagram.com/seu_perfil" target="blank" >
+                    <img src="static/img/Logos/instagram.svg" alt="Instagram" width="30" height="24" id="instagram">Ache um aumigo</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('parceiros') }}" target="blank">
+                    <img src="static/img/Logos/Iconcoracao.svg" alt="Como ajudar" width="30" height="24" id="ComoAjudar">Como Ajudar</a>
+                </li><br>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('blog') }}" target="blank">
+                    <img src="static/img/Logos/Blog.svg" alt="Instagram" width="30" height="24" id="Blog">Blog</a>
+                </li>
+              </div>
+          </div>
+        </div>
+      
+            <h6 style="text-align: center; font-size: xx-small;"><a href="https://www.linkedin.com/in/jo%C3%A3o-v%C3%ADtor?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="blank">
+              © João Vítor  </a><span id="ano-copyright"></span>
+            </h6>
+            
+          
+              <script>
+                // Captura o ano atual
+                const anoAtual = new Date().getFullYear();
+              
+                // Seleciona o elemento HTML com o id 'ano-copyright'
+                document.getElementById('ano-copyright').textContent = anoAtual;
+              </script>
+          
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      </footer>
 </body>
 </html>  

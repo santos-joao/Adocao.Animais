@@ -8,7 +8,42 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
 </head>
+<nav class="navbar navbar-expand-lg navbar-dark is-navbar-dark w-100 shadow-sm">
+  <div class="container px-0">
 
+      <b><a class="navbar-brand" href="{{ url_for('index') }}"><img src="/static/img/logo-projeto.png" alt="Achei um Amigo"></a></b>
+
+      <!-- pra que serve? -->
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="icon-bar top-bar mt-0"></span>
+          <span class="icon-bar middle-bar"></span>
+          <span class="icon-bar bottom-bar"></span>
+      </button>
+
+      <!-- navbar -->
+      <!-- tudo funcionando, tudo de css tá no arquivo style.css pra ficar mais fácil de ler -->
+      <div class="collapse navbar-collapse" id="navbar-default" >
+
+          <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                  <b><a class="nav-link" href="{{ url_for('adotar') }}">Quero Adotar</a></b>
+              </li>
+              <li class="nav-item">
+                  <b><a class="nav-link" href="{{ url_for('blog') }}">Blog</a></b>
+              </li>
+              <li class="nav-item">
+                  <b><a class="nav-link" href="{{ url_for('parceiros') }}">Como Ajudar</a></b>
+              </li>
+          </ul>
+
+          <div class="navbar-links">
+            <a href="{{ url_for('login') }}" class="no-underline" title="Login"><b>Login</b></a>
+            <a href="{{ url_for('cadastro') }}" class="btn" title="Cadastre-se"><b>Cadastre-se</b></a>
+          </div>
+
+      </div>
+  </div>
+</nav>
 <body class="bg-light">
     <div class="container py-5">
       <h1 class="mb-4">Seu Login</h1>
