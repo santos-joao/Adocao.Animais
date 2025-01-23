@@ -243,3 +243,28 @@ form {
   justify-content: center;
   align-items: center;
 }
+
+#card-mensagem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(img/Cards/patinhas.png);
+  background-size: 100%;
+  background-position: left 260px;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 20px;
+  color: rgb(12, 12, 12);
+
+}
+
+#titulo_adocao {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: rgb(77, 42, 100);
+  text-align: center;
+  background-color: #bfa5c5;
+  border-radius: 10px;
+  padding: 10px;
+}

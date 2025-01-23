@@ -78,9 +78,9 @@
 <!-- cards e mapa -->
 <!-- levei uma surra pra deixar como está -->
 <div class="container-fluid px-4">
-  <div class="row g-4 mt-4">
+  <div class="row g-4 mt-6">
     <!-- card 1 -->
-    <div class="col-md-4">
+    <div class="col-md-6">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title mb-5">Cadastre-se ou faça login para adotar!</h5>
@@ -91,22 +91,34 @@
       </div>
     </div>
   </div>
-
-  <!-- card 2 -->
-  <div class="col-md-4">
+ <!-- card 2 -->
+  <div class="col-md-6">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title mb-4">Encontre seu aumiguinho!</h5>
         <p class="card-text mb-4" style="font-weight: bold; font-size: 1.2em; color: rgb(77, 42, 100);">Eles estão esperando por você para oferecer muito amor!</p>
         <div style="margin-top: 100px;">
-          <a href="{{ url_for('adotar') }}" class="btn btn-custom">Venha Adotar</a>
+          <a href="{{ url_for('adotar') }}" class="btn btn-custom">Quero um Aumiguinho</a>
         </div>
       </div>
     </div>
   </div>
+</div>
 
+
+
+
+<div class="container-fluid px-4">
+    <div class="row g-4 mt-4">
+      <div class="col-md-6">
+        <!--Mensagem sobre local-->
+        <div class="card" Id="card-mensagem">
+            <h5 class="card-title mb-5">Venhos nos Conhercer !!!</h5>
+            <h5 justify-content='center';>Venha nos visitar, aqui você pode encontrar um cãopanheiro para sua vida !!<br> O mapa mostra nosso endereço</h5>
+        </div>
+      </div>
   <!-- mapa -->
-  <div class="col-md-4">
+  <div class="col-md-6">
     <div class="card">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.7517155282146!2d-43.3606657254696!3d-22.999898142187522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bdac5af2588f5%3A0xb52be3573d46be59!2sSenac%20Barra%20da%20Tijuca%20(Marapendi)!5e0!3m2!1sen!2sbr!4v1234567890" style="border: 0; width: 100%; height: 100%;" allowfullscreen="" loading="lazy">
       </iframe>
@@ -125,7 +137,7 @@
       </div>
       <!--Mensagem-->
         <div class="col-sm-12 col-md-5">           
-          <p class="tagline"; text-align="center">Amigos de Pata é um programa criado para estreitar laços entre pessoas que têm o sonho de adotar um animalzinho e nossa ONG e protetores parceiros. Vamos juntos incentivar a adoção, conscientizar sobre a posse responsável e fomentar a cultura de doação em prol do bem-estar animais!</p>
+          <p class="tagline"; text-align="center" >Amigos de Pata é um programa criado para estreitar laços entre pessoas que têm o sonho de adotar um animalzinho e nossa ONG e protetores parceiros. Vamos juntos incentivar a adoção, conscientizar sobre a posse responsável e fomentar a cultura de doação em prol do bem-estar animais!</p>
         </div>
         <!--Rede Social-->
       <div class="col-sm-12 col-md-5">
@@ -135,7 +147,7 @@
               <img src="static/img/Logos/whatsapp.svg" alt="WhatsApp" width="30" height="24" id="Whatsapp"> (21)99999-0000</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://www.instagram.com/seu_perfil" target="blank" >
+            <a class="nav-link" href="https://www.instagram.com/garranimal/" target="blank" >
               <img src="static/img/Logos/instagram.svg" alt="Instagram" width="30" height="24" id="instagram">Ache um aumigo</a>
           </li>
           <li class="nav-item">
