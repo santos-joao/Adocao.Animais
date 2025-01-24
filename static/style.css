@@ -252,7 +252,6 @@ form {
   background-image: url(img/Cards/patinhas.png);
   background-size: 100%;
   background-position: left 260px;
-  background-color: transparent;
   border-radius: 10px;
   padding: 20px;
   color: rgb(12, 12, 12);
@@ -267,4 +266,32 @@ form {
   background-color: #bfa5c5;
   border-radius: 10px;
   padding: 10px;
+}
+
+#body_login{
+ background-image: url(img/Cards/patinhas.png);
+ background-size: 100%;
+}
+
+#container_login{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+
+  margin-bottom: 5rem;
+  color: rgb(77, 42, 100);
+}
+
+#container_login .button{
+  background-color: rgb(77, 42, 100);
+  color: white;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
 }

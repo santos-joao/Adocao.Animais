@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
 </head>
-<body>
+<body id="body_login">
 <nav class="navbar navbar-expand-lg navbar-dark is-navbar-dark w-100 shadow-sm">
   <div class="container px-0">
 
@@ -46,8 +46,8 @@
       </div>
   </div>
 </nav>
-<div class="bg-light"> 
-    <div class="container py-5">
+<div class="bg-light" id="container_login" > 
+    <div class="container py-5" id="container_login">
       <h1 class="mb-4">Seu Login</h1>
       {% if erro %}
       <div class="alert alert-danger" role="alert">
@@ -72,7 +72,7 @@
           </label>
           <a href="#"> Esqueci minha senha</a>
         </div>
-        <button type="submit">Login</button>
+        <button class="btn btn-custom" type="submit">Login</button>
         <div>
           <p>Não tem Conta?
           <a href="#">Cadastra-se</a></p>
