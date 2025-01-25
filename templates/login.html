@@ -9,10 +9,6 @@
 
 </head>
 
-<<<<<<< Updated upstream
-<body class="bg-light">
-    <div class="container py-5">
-=======
       <b><a class="navbar-brand" href="{{ url_for('index') }}"><img src="/static/img/logo-projeto.png" alt="Achei um Amigo"></a></b>
 
       <!-- pra que serve? -->
@@ -51,7 +47,6 @@
 </nav>
 <div class="bg-light" id="container_login" > 
     <div class="container py-5" id="container_login">
->>>>>>> Stashed changes
       <h1 class="mb-4">Seu Login</h1>
       {% if erro %}
       <div class="alert alert-danger" role="alert">
@@ -60,15 +55,10 @@
     {% endif %}
       <form method="POST" class="bg-white p-4 rounded shadow-sm">
         <div class="mb-3">
-<<<<<<< Updated upstream
-          <label for="usuario" class="form-label">Usuário</label>
-          <input type="text" id="usuario" name="usuario" class="form-control" required>
-=======
           <label for="email" class="form-label">E-Mail</label>
           <i class="bx bxs-user"></i>
           <input type="text" id="email" name="email" class="form-control" required>
         
->>>>>>> Stashed changes
         </div>
         <div class="mb-3">
           <label for="senha" class="form-label">Senha</label>
