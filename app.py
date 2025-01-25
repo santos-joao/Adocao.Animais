@@ -105,11 +105,10 @@ def blog():
     # Redireciona para a página inicial (index)
     return render_template('blog.html')
 
-@app.route('/parceiros')
-def parceiros():
+@app.route('/ajudar')
+def ajudar():
     # Redireciona para a página inicial (index)
-    return render_template('parceiros.html')
-
+    return render_template('ajudar.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

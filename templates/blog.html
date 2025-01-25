@@ -25,17 +25,17 @@
             <!-- tudo funcionando, tudo de css tá no arquivo style.css pra ficar mais fácil de ler -->
             <div class="collapse navbar-collapse" id="navbar-default" >
 
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <b><a class="nav-link" href="{{ url_for('adotar') }}">Quero Adotar</a></b>
-                    </li>
-                    <li class="nav-item">
-                        <b><a class="nav-link" href="{{ url_for('blog') }}">Blog</a></b>
-                    </li>
-                    <li class="nav-item">
-                        <b><a class="nav-link" href="{{ url_for('parceiros') }}">Como Ajudar</a></b>
-                    </li>
-                </ul>
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <b><a class="nav-link" href="{{ url_for('adotar') }}">Quero Adotar</a></b>
+                </li>
+                <li class="nav-item">
+                    <b><a class="nav-link" href="{{ url_for('ajudar') }}">Como Ajudar</a></b>
+                </li>
+                <li class="nav-item">
+                  <b><a class="nav-link" href="{{ url_for('blog') }}">Blog</a></b>
+                </li>
+              </ul>
 
                 <div class="navbar-links">
                   <a href="{{ url_for('login') }}" class="no-underline" title="Login"><b>Login</b></a>
