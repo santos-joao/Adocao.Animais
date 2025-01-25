@@ -5,11 +5,11 @@ app = Flask(__name__)
 app.secret_key = 'chave_flask_super_secreta'  # Necessário para usar session
 
 db_config = {
-    'user': 'adocaonimais.mysql.database.azure.com',
+    'user': 'python',
     'password': 'Aula@123',
     'host': 'adocaonimais.mysql.database.azure.com',
-    'port': '3306' ,
-    'database': 'adocaonimais '
+    'port': '3306',
+    'database': 'adocaoanimais',
 }
 #senha banco: Aula@123
 
@@ -20,15 +20,17 @@ def index():
 @app.route('/cadastro', methods=['GET', 'POST'])
 def cadastro():
     if request.method == 'POST':
-        usuario = request.form.get('usuario')
+        nome = request.form.get('nome').title()
+        sobrenome = request.form.get('sobrenome').title()
+        email = request.form.get('email')
         senha = request.form.get('senha')
 
         # Inserir no banco
         try:
             cnx = mysql.connector.connect(**db_config)
             cursor = cnx.cursor()
-            query = "INSERT INTO usuario_secretaria (usuario, senha) VALUES (%s, %s)"  # mudar quando criarmos as chaves no banco
-            cursor.execute(query, (usuario, senha))
+            query = "INSERT INTO login (nome, sobrenome, email, senha) VALUES (%s, %s, %s, %s)"
+            cursor.execute(query, (nome, sobrenome, email, senha))
             cnx.commit()
             cursor.close()
             cnx.close()
@@ -37,22 +39,22 @@ def cadastro():
             return render_template('cadastro.html', erro="Erro ao realizar o cadastro.")
 
         # Após cadastrar, redireciona para página inicial ou outra
-        return redirect(url_for('index'))
+        return redirect(url_for('home'))
     else:
         return render_template('cadastro.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        usuario = request.form.get('usuario')
+        email = request.form.get('email')
         senha = request.form.get('senha')
 
         # Verificar no banco
         try:
             cnx = mysql.connector.connect(**db_config)
             cursor = cnx.cursor()
-            query = "SELECT COUNT(*) FROM usuario_secretaria WHERE usuario=%s AND senha=%s"  # mudar quando criarmos as chaves no banco
-            cursor.execute(query, (usuario, senha))
+            query = "SELECT COUNT(*) FROM login WHERE email=%s AND senha=%s"
+            cursor.execute(query, (email, senha))
             result = cursor.fetchone()
             cursor.close()
             cnx.close()
@@ -62,37 +64,30 @@ def login():
 
         if result and result[0] == 1:
             # Login OK -> guarda na sessão
-            session['usuario_logado'] = usuario
-            return redirect(url_for('home'))       
+            session['email_logado'] = email
+            return redirect(url_for('home'))
         else:
             # Falha no login -> renderiza login novamente com mensagem de erro
             return render_template('login.html', erro="Usuário ou senha incorretos")
     else:
         return render_template('login.html')
 
-@app.route('/home')
-def user_home():
-    if 'usuario_logado' in session:
-        return f"Bem-vindo, {session['usuario_logado']}!"
-    else:
-        return redirect(url_for('login'))
-
 # Rota para a página inicial do sistema
 @app.route('/home')
 def home():
     # Verifica se o usuário está logado na sessão
-    if 'usuario_logado' not in session:
+    if 'email_logado' not in session:
         return redirect(url_for('login'))  # Redireciona para a página de login se o usuário não estiver logado    
     
-    usuario = session['usuario_logado']  # Recupera o nome do usuário logado da sessão
+    nome = session['nome']  # Recupera o nome do usuário logado da sessão
 
-    return render_template('home.html', usuario=usuario) # Renderiza o template 'home.html', passando o nome do usuário como variável
+    return render_template('home.html', nome=nome) # Renderiza o template 'home.html', passando o nome do usuário como variável
 
 # Rota para fazer logout do sistema
 @app.route('/logout')
 def logout():
     # Remove o usuário logado da sessão
-    session.pop('usuario_logado', None)
+    session.pop('email_logado', None)
     # Redireciona para a página inicial (index)
     return redirect(url_for('index'))
 
@@ -110,6 +105,10 @@ def parceiros():
     # Redireciona para a página inicial (index)
     return render_template('parceiros.html')
 
+@app.route('/ajudar')
+def ajudar():
+    # Redireciona para a página inicial (index)
+    return render_template('ajudar.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
