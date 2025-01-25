@@ -221,7 +221,7 @@ background-color: rgb(114, 114, 240);
   padding: 30px 40px;
   border-radius: 10px;
   margin-top: 20px;
-  background: #bfa5c5;
+  background-color: transparent !important;
 }
 
 form {
