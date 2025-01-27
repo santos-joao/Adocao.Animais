@@ -320,3 +320,10 @@ blockquote {
   background: transparent;
 }
 
+
+/* responsividade campo do form */
+.form-control {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
