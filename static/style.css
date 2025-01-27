@@ -24,11 +24,27 @@
     border-radius: 10px; /* Opcional, se você quiser bordas arredondadas */
   }
 
+#Imagem_index {
+  width: 100%; /* A imagem ocupa toda a largura do item */
+  object-fit: contain;  /* isso aqui serve pra imagem caber certinho no carrossel, sem esticar. precisamos de imagens que sejam do mesmo tamanho */
+  border-radius: 10px;
+
+}
 
 /* navbar */
 /* lutei pra deixar bonitinho, não mexer */
 nav{
     background: #bfa5c5;
+}
+
+.navbar{
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  
 }
 
 .navbar img {
