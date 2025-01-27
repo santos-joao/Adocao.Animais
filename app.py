@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.secret_key = 'chave_flask_super_secreta'  # Necessário para usar session
 
 db_config = {
-    'user': 'adocaonimais.mysql.database.azure.com',
+    'user': 'python',
     'password': 'Aula@123',
     'host': 'adocaonimais.mysql.database.azure.com',
     'port': '3306' ,
