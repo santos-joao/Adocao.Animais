@@ -295,3 +295,12 @@ form {
   text-decoration: none;
   font-weight: bold;
 }
+
+blockquote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
