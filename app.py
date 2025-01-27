@@ -112,3 +112,15 @@ def ajudar():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+# > cadastro
+# - nome
+# - sobrenome
+# - email
+#   - email só é válido se tiver @ e se terminar com .com ou .com.br
+# - senha
+#   - validação da senha
+
+# > index
+# - mudar card ao lado do mapa
