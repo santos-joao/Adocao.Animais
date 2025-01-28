@@ -23,6 +23,12 @@
     object-fit: contain;  /* isso aqui serve pra imagem caber certinho no carrossel, sem esticar. precisamos de imagens que sejam do mesmo tamanho */
     border-radius: 10px; /* Opcional, se você quiser bordas arredondadas */
   }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: black; /* Cor preta */
+    background-size: 50%;   /* Ajusta o tamanho do ícone */
+    border-radius: 100%;      /* Torna os ícones circulares (opcional) */
+  }
 
 #Imagem_index {
   width: 100%; /* A imagem ocupa toda a largura do item */
