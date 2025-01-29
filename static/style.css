@@ -23,12 +23,34 @@
     object-fit: contain;  /* isso aqui serve pra imagem caber certinho no carrossel, sem esticar. precisamos de imagens que sejam do mesmo tamanho */
     border-radius: 10px; /* Opcional, se você quiser bordas arredondadas */
   }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: black; /* Cor preta */
+    background-size: 50%;   /* Ajusta o tamanho do ícone */
+    border-radius: 100%;      /* Torna os ícones circulares (opcional) */
+  }
 
+#Imagem_index {
+  width: 100%; /* A imagem ocupa toda a largura do item */
+  object-fit: contain;  /* isso aqui serve pra imagem caber certinho no carrossel, sem esticar. precisamos de imagens que sejam do mesmo tamanho */
+  border-radius: 10px;
+
+}
 
 /* navbar */
 /* lutei pra deixar bonitinho, não mexer */
 nav{
     background: #bfa5c5;
+}
+
+.navbar{
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  
 }
 
 .navbar img {
@@ -221,7 +243,7 @@ background-color: rgb(114, 114, 240);
   padding: 30px 40px;
   border-radius: 10px;
   margin-top: 20px;
-  background: #bfa5c5;
+  background-color: transparent !important;
 }
 
 form {
@@ -242,4 +264,72 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#card-mensagem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(img/Cards/patinhas.png);
+  background-size: 100%;
+  background-position: left 260px;
+  border-radius: 10px;
+  padding: 20px;
+  color: rgb(12, 12, 12);
+
+}
+
+#titulo_adocao {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: rgb(77, 42, 100);
+  text-align: center;
+  background-color: #bfa5c5;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#body_login{
+ background-image: url(img/Cards/patinhas.png);
+ background-size: 100%;
+}
+
+#container_login{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+
+  margin-bottom: 5rem;
+  color: rgb(77, 42, 100);
+}
+
+#container_login .button{
+  background-color: rgb(77, 42, 100);
+  color: white;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+blockquote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+
+/* responsividade campo do form */
+.form-control {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
 }

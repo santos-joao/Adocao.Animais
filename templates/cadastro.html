@@ -8,7 +8,7 @@
 
 
 </head>
-<body>
+<body id="body_login">
   <nav class="navbar navbar-expand-lg navbar-dark is-navbar-dark w-100 shadow-sm">
     <div class="container px-0">
   
@@ -25,17 +25,14 @@
         <!-- tudo funcionando, tudo de css tá no arquivo style.css pra ficar mais fácil de ler -->
         <div class="collapse navbar-collapse" id="navbar-default" >
   
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <b><a class="nav-link" href="{{ url_for('adotar') }}">Quero Adotar</a></b>
-                </li>
-                <li class="nav-item">
-                    <b><a class="nav-link" href="{{ url_for('blog') }}">Blog</a></b>
-                </li>
-                <li class="nav-item">
-                    <b><a class="nav-link" href="{{ url_for('parceiros') }}">Como Ajudar</a></b>
-                </li>
-            </ul>
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+                <b><a class="nav-link" href="{{ url_for('adotar') }}">Quero Adotar</a></b>
+            </li>
+            <li class="nav-item">
+              <b><a class="nav-link" href="{{ url_for('blog') }}">Blog</a></b>
+            </li>
+          </ul>
   
             <div class="navbar-links">
               <a href="{{ url_for('login') }}" class="no-underline" title="Login"><b>Login</b></a>
@@ -45,20 +42,28 @@
         </div>
     </div>
 </nav>
-
-<div class="bg-light">
- <div class="container py-5">
+<br><br>
+<div class="bg-light" >
+ <div class="container py-5" id="container_login">
     <h1 class="mb-4">Cadastro de Usuário</h1>
     <form method="POST" class="bg p-4 rounded shadow-sm">
       <div class="mb-3">
-        <label for="usuario" class="form-label">Usuário</label>
+        <label for="usuario" class="form-label">Nome</label>
         <input type="text" id="usuario" name="usuario" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="sobrenome" class="form-label">Sobrenome</label>
+        <input type="text" id="sobrenome" name="sobrenome" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">E-Mail</label>
+        <input type="text" id="email" name="email" class="form-control" required>
       </div>
       <div class="mb-3">
         <label for="senha" class="form-label">Senha</label>
         <input type="password" id="senha" name="senha" class="form-control" required>
       </div>
-      <button type="submit">Cadastrar</button>
+      <button type="submit" class="btn btn-custom">Cadastrar</button>
   </form>
 </div>
 </body>

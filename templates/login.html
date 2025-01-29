@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
 </head>
-<body>
+<body id="body_login">
 <nav class="navbar navbar-expand-lg navbar-dark is-navbar-dark w-100 shadow-sm">
   <div class="container px-0">
 
@@ -26,17 +26,14 @@
       <!-- tudo funcionando, tudo de css tá no arquivo style.css pra ficar mais fácil de ler -->
       <div class="collapse navbar-collapse" id="navbar-default" >
 
-          <ul class="navbar-nav mx-auto">
-              <li class="nav-item">
-                  <b><a class="nav-link" href="{{ url_for('adotar') }}">Quero Adotar</a></b>
-              </li>
-              <li class="nav-item">
-                  <b><a class="nav-link" href="{{ url_for('blog') }}">Blog</a></b>
-              </li>
-              <li class="nav-item">
-                  <b><a class="nav-link" href="{{ url_for('parceiros') }}">Como Ajudar</a></b>
-              </li>
-          </ul>
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+              <b><a class="nav-link" href="{{ url_for('adotar') }}">Quero Adotar</a></b>
+          </li>
+          <li class="nav-item">
+            <b><a class="nav-link" href="{{ url_for('blog') }}">Blog</a></b>
+          </li>
+        </ul>
 
           <div class="navbar-links">
             <a href="{{ url_for('login') }}" class="no-underline" title="Login"><b>Login</b></a>
@@ -46,8 +43,9 @@
       </div>
   </div>
 </nav>
-<div class="bg-light"> 
-    <div class="container py-5">
+<br><br>
+<div class="bg-light" id="container_login" > 
+    <div class="container py-5" id="container_login">
       <h1 class="mb-4">Seu Login</h1>
       {% if erro %}
       <div class="alert alert-danger" role="alert">
@@ -72,10 +70,10 @@
           </label>
           <a href="#"> Esqueci minha senha</a>
         </div>
-        <button type="submit">Login</button>
+        <button class="btn btn-custom" type="submit">Login</button>
         <div>
           <p>Não tem Conta?
-          <a href="#">Cadastra-se</a></p>
+          <a href="{{ url_for('cadastro') }}">Cadastre-se</a></p>
         </div>
     </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

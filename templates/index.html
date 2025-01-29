@@ -9,10 +9,10 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark is-navbar-dark w-100 shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-dark is-navbar-dark w-100 shadow-sm" ;>
         <div class="container px-0">
 
-            <b><a class="navbar-brand" href="{{ url_for('index') }}"><img src="/static/img/logo-projeto.png" alt="Achei um Amigo"></a></b>
+            <b><a class="navbar-brand"  href="{{ url_for('index') }}"><img src="/static/img/logo-projeto.png" alt="Achei um Amigo"></a></b>
 
             <!-- pra que serve? -->
             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,17 +25,14 @@
             <!-- tudo funcionando, tudo de css tá no arquivo style.css pra ficar mais fácil de ler -->
             <div class="collapse navbar-collapse" id="navbar-default" >
 
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <b><a class="nav-link" href="{{ url_for('adotar') }}">Quero Adotar</a></b>
-                    </li>
-                    <li class="nav-item">
-                        <b><a class="nav-link" href="{{ url_for('blog') }}">Blog</a></b>
-                    </li>
-                    <li class="nav-item">
-                        <b><a class="nav-link" href="{{ url_for('parceiros') }}">Como Ajudar</a></b>
-                    </li>
-                </ul>
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <b><a class="nav-link" href="{{ url_for('adotar') }}">Quero Adotar</a></b>
+                </li>
+                <li class="nav-item">
+                  <b><a class="nav-link" href="{{ url_for('blog') }}">Blog</a></b>
+                </li>
+              </ul>
 
                 <div class="navbar-links">
                   <a href="{{ url_for('login') }}" class="no-underline" title="Login"><b>Login</b></a>
@@ -45,21 +42,72 @@
             </div>
         </div>
     </nav>
-
+    <br><br><br><br><br>
 <!-- carrossel -->
 <!-- tava tentando ajustar pra não deixar as imagens esticadas -->
+
+
+
+<img src="static/img/Cards/Banner_pet.png" id="Imagem_index">
+
+<!--
+<div class="image-slider">
+  <div class="image-box">
+      <img src="static/img/Animais/MariaDulce_1.jpeg;'static/img/Animais/MariaDulce_1.jpeg';'static/img/Animais/MariaDulce_1.jpeg'" alt="Sustentabilidade">
+  </div>
+  <div class="image-box">
+      <img src="'servicosimg2.png'; 'servicosimg3.png';'servicosimg4.png'" alt="Serviços">
+  </div>
+  <div class="image-box">
+      <img src="'tecnologiaimg1.png'; 'tecnologiaimg2.png'; 'tecnologiaimg3.png'" alt="Tecnologia">
+  </div>
+</div>
+-->
+
 <div class="carousel-fluid p-0">
   <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" >
     
-    <div class="carousel-inner">
-      <div class="carousel-item active"  class="carrossel-item" class="carousel-item img" data-bs-interval="2000">
-        <img src="static/img/carrossel/car_banner.webp" class="d-block w-100" alt="...">
+    <div class="carousel-inner" class="carousel-inner img" >
+      <div class="carousel-item active"  class="carrossel-item" class="carousel-item img" data-bs-interval="5000">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="static/img/Animais/MariaDulce_1.jpeg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Dulce Maria</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="carousel-item" class="carousel-item img" data-bs-interval="5000">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="static/img/Animais/jake.jpeg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Jake</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="carousel-item" class="carousel-item img" data-bs-interval="2000">
-        <img src="static/img/carrossel/car_adoteamigo.png" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item" class="carousel-item img" data-bs-interval="2000">
-        <img src="static/img/carrossel/car_cachorro.webp" class="d-block w-100" alt="...">
+      <div class="carousel-item" class="carousel-item img" data-bs-interval="5000">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="static/img/Animais/lya.jpeg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Lya</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -78,9 +126,9 @@
 <!-- cards e mapa -->
 <!-- levei uma surra pra deixar como está -->
 <div class="container-fluid px-4">
-  <div class="row g-4 mt-4">
+  <div class="row g-4 mt-6">
     <!-- card 1 -->
-    <div class="col-md-4">
+    <div class="col-md-6">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title mb-5">Cadastre-se ou faça login para adotar!</h5>
@@ -91,22 +139,34 @@
       </div>
     </div>
   </div>
-
-  <!-- card 2 -->
-  <div class="col-md-4">
+ <!-- card 2 -->
+  <div class="col-md-6">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title mb-4">Encontre seu aumiguinho!</h5>
         <p class="card-text mb-4" style="font-weight: bold; font-size: 1.2em; color: rgb(77, 42, 100);">Eles estão esperando por você para oferecer muito amor!</p>
         <div style="margin-top: 100px;">
-          <a href="{{ url_for('adotar') }}" class="btn btn-custom">Venha Adotar</a>
+          <a href="{{ url_for('adotar') }}" class="btn btn-custom">Quero um Aumiguinho</a>
         </div>
       </div>
     </div>
   </div>
+</div>
 
+
+
+
+<div class="container-fluid px-4">
+    <div class="row g-4 mt-4">
+      <div class="col-md-6">
+        <!--Mensagem sobre local-->
+        <div class="card" Id="card-mensagem">
+            <h5 class="card-title mb-5">Venhos nos Conhercer !!!</h5>
+            <h5 justify-content='center';>Venha nos visitar, aqui você pode encontrar um cãopanheiro para sua vida !!<br> O mapa mostra nosso endereço</h5>
+        </div>
+      </div>
   <!-- mapa -->
-  <div class="col-md-4">
+  <div class="col-md-6">
     <div class="card">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.7517155282146!2d-43.3606657254696!3d-22.999898142187522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bdac5af2588f5%3A0xb52be3573d46be59!2sSenac%20Barra%20da%20Tijuca%20(Marapendi)!5e0!3m2!1sen!2sbr!4v1234567890" style="border: 0; width: 100%; height: 100%;" allowfullscreen="" loading="lazy">
       </iframe>
@@ -125,7 +185,7 @@
       </div>
       <!--Mensagem-->
         <div class="col-sm-12 col-md-5">           
-          <p class="tagline"; text-align="center">Amigos de Pata é um programa criado para estreitar laços entre pessoas que têm o sonho de adotar um animalzinho e nossa ONG e protetores parceiros. Vamos juntos incentivar a adoção, conscientizar sobre a posse responsável e fomentar a cultura de doação em prol do bem-estar animais!</p>
+          <p class="tagline"; text-align="center" >Amigos de Pata é um programa criado para estreitar laços entre pessoas que têm o sonho de adotar um animalzinho e nossa ONG e protetores parceiros. Vamos juntos incentivar a adoção, conscientizar sobre a posse responsável e fomentar a cultura de doação em prol do bem-estar animais!</p>
         </div>
         <!--Rede Social-->
       <div class="col-sm-12 col-md-5">
@@ -135,13 +195,9 @@
               <img src="static/img/Logos/whatsapp.svg" alt="WhatsApp" width="30" height="24" id="Whatsapp"> (21)99999-0000</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://www.instagram.com/seu_perfil" target="blank" >
-              <img src="static/img/Logos/instagram.svg" alt="Instagram" width="30" height="24" id="instagram">Ache um aumigo</a>
+            <a class="nav-link" href="https://www.instagram.com/garranimal/" target="blank" >
+              <img src="static/img/Logos/instagram.svg" alt="Instagram" width="30" height="24" id="instagram">Ache um Aumigo</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('parceiros') }}" target="blank">
-              <img src="static/img/Logos/Iconcoracao.svg" alt="Como ajudar" width="30" height="24" id="ComoAjudar">Como Ajudar</a>
-          </li><br>
           <li class="nav-item">
             <a class="nav-link" href="{{ url_for('blog') }}" target="blank">
               <img src="static/img/Logos/Blog.svg" alt="Instagram" width="30" height="24" id="Blog">Blog</a>

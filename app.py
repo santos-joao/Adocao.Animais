@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.secret_key = 'chave_flask_super_secreta'  # Necessário para usar session
 
 db_config = {
-    'user': 'adocaonimais.mysql.database.azure.com',
+    'user': 'python',
     'password': 'Aula@123',
     'host': 'adocaonimais.mysql.database.azure.com',
     'port': '3306' ,
@@ -105,11 +105,13 @@ def blog():
     # Redireciona para a página inicial (index)
     return render_template('blog.html')
 
-@app.route('/parceiros')
-def parceiros():
-    # Redireciona para a página inicial (index)
-    return render_template('parceiros.html')
-
-
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+# > cadastro
+# - email
+#   - email só é válido se tiver @ e se terminar com .com ou .com.br
+
+# > index
+# - mudar card ao lado do mapa
