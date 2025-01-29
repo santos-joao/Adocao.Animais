@@ -34,10 +34,17 @@
                 </li>
               </ul>
 
-                <div class="navbar-links">
-                  <a href="{{ url_for('login') }}" class="no-underline" title="Login"><b>Login</b></a>
-                  <a href="{{ url_for('cadastro') }}" class="btn" title="Cadastre-se"><b>Cadastre-se</b></a>
-                </div>
+              {% if is_logged_in %}
+              <div class="navbar-links">
+                <a href="{{ url_for('config') }}" class="no-underline" title="Configurações"><b>Configurações</b></a>
+                <a href="{{ url_for('logout') }}" class="btn" title="Logout"><b>Logout</b></a>
+              </div>
+              {% else %}
+              <div class="navbar-links">
+                <a href="{{ url_for('login') }}" class="no-underline" title="Login"><b>Login</b></a>
+                <a href="{{ url_for('cadastro') }}" class="btn" title="Cadastre-se"><b>Cadastre-se</b></a>
+              </div>
+              {% endif %}
 
             </div>
         </div>
@@ -45,8 +52,6 @@
     <br><br><br><br><br>
 <!-- carrossel -->
 <!-- tava tentando ajustar pra não deixar as imagens esticadas -->
-
-
 
 <img src="static/img/Cards/Banner_pet.png" id="Imagem_index">
 
@@ -143,7 +148,7 @@
   <div class="col-md-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title mb-4">Encontre seu aumiguinho!</h5>
+        <h5 class="card-title mb-4">Encontre seu Aumiguinho!</h5>
         <p class="card-text mb-4" style="font-weight: bold; font-size: 1.2em; color: rgb(77, 42, 100);">Eles estão esperando por você para oferecer muito amor!</p>
         <div style="margin-top: 100px;">
           <a href="{{ url_for('adotar') }}" class="btn btn-custom">Quero um Aumiguinho</a>
@@ -161,8 +166,8 @@
       <div class="col-md-6">
         <!--Mensagem sobre local-->
         <div class="card" Id="card-mensagem">
-            <h5 class="card-title mb-5">Venhos nos Conhercer !!!</h5>
-            <h5 justify-content='center';>Venha nos visitar, aqui você pode encontrar um cãopanheiro para sua vida !!<br> O mapa mostra nosso endereço</h5>
+            <h5 class="card-title mb-5">Venha nos conhecer!</h5>
+            <h5 justify-content='center'>Aqui você pode encontrar um aumiguinho para sua vida!<br><br>Nosso endereço:<br>Av. das Americas, 3959,<br>Barra da Tijuca, Rio de Janeiro/RJ<br>CEP: 22631-003</h5>
         </div>
       </div>
   <!-- mapa -->
