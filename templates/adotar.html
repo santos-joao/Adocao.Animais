@@ -34,10 +34,17 @@
                   </li>
                 </ul>
 
+                {% if is_logged_in %}
+                <div class="navbar-links">
+                  <a href="{{ url_for('config') }}" class="no-underline" title="Configurações"><b>Configurações</b></a>
+                  <a href="{{ url_for('logout') }}" class="btn" title="Logout"><b>Logout</b></a>
+                </div>
+              {% else %}
                 <div class="navbar-links">
                   <a href="{{ url_for('login') }}" class="no-underline" title="Login"><b>Login</b></a>
                   <a href="{{ url_for('cadastro') }}" class="btn" title="Cadastre-se"><b>Cadastre-se</b></a>
                 </div>
+              {% endif %}
 
             </div>
         </div>
@@ -45,7 +52,7 @@
   <br><br><br><br><br>
 <!---Cards dos pets-->
 <br>
-<h2 id="titulo_adocao"> Nosso amigos Pets</h2>
+<h2 id="titulo_adocao"> Conheça nossos Aumigos!</h2>
 <div class="container-fluid px-0">
   <div class="row g-4 mt-4">
     <div class="col-md-4">   
@@ -132,10 +139,6 @@
         </ul>
       </div>
     </div>
-
-
-
-
 
 </div>
     <footer> 
