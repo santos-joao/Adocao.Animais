@@ -25,7 +25,8 @@
   .carousel-control-next-icon {
     background-color: black; /* Cor preta */
     background-size: 50%;   /* Ajusta o tamanho do ícone */
-    border-radius: 100%;      /* Torna os ícones circulares (opcional) */
+    border-radius: 100%;/* Torna os ícones circulares (opcional) */
+
   }
 
 #Imagem_index {
@@ -34,12 +35,12 @@
   border-radius: 10px;
 
 }
-.card-text {
+.card-body {
   font-size: 1.1rem;
   color: rgb(8, 8, 8);
   text-align: center;
   border-radius: 10px;
-  padding: 10px;
+  padding: 100px;
 
 }
 
@@ -286,15 +287,6 @@ form {
 
 }
 
-#titulo_adocao {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: rgb(77, 42, 100);
-  text-align: center;
-  background-color: #bfa5c5;
-  border-radius: 10px;
-  padding: 10px;
-}
 
 #body_login{
  background-image: url(img/Cards/patinhas.png);
@@ -338,4 +330,41 @@ blockquote {
   max-width: 500px;
   width: 100%;
   margin: 0 auto;
+}
+
+
+/* responsividade Adocao */
+
+#titulo_adocao {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: rgb(77, 42, 100);
+  text-align: center;
+  background-color: #bfa5c5;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#container_adocao {
+  background-image: url(img/Cards/patinhas.png);
+ background-size: 100%;
+
+}
+
+.card-animal img{
+  background-color: rgb(131, 126, 134);
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  width: 100%; /* A imagem ocupa toda a largura do item */
+  object-fit: contain;  /* isso aqui serve pra imagem caber certinho no carrossel, sem esticar. precisamos de imagens que sejam do mesmo tamanho */
+  border-radius: 100px;
+}
+
+#total_cards {
+
+  background: #e5d7e9;
+  border-radius: 10px;
+  padding: 100px;
+  color: rgb(12, 12, 12);
 }
