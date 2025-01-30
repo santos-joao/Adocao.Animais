@@ -356,15 +356,23 @@ blockquote {
   padding: 0.75rem 1rem;
   text-decoration: none;
   font-weight: bold;
-  width: 100%; /* A imagem ocupa toda a largura do item */
-  object-fit: contain;  /* isso aqui serve pra imagem caber certinho no carrossel, sem esticar. precisamos de imagens que sejam do mesmo tamanho */
+  width: 100%;  /* Defina a largura desejada dos itens */
+  height: 300px; /* Defina a altura dos itens */
+  overflow: hidden; 
+  object-fit: cover;  /* isso aqui serve pra imagem caber certinho no carrossel, sem esticar. precisamos de imagens que sejam do mesmo tamanho */
   border-radius: 100px;
+
 }
 
-#total_cards {
-
-  background: #e5d7e9;
+.list-group {
+  background-color:rgb(131, 126, 134);
   border-radius: 10px;
-  padding: 100px;
-  color: rgb(12, 12, 12);
+  padding: 10px;
+  color: rgb(77, 42, 100);
+
+} 
+
+#Nome_Adocao {
+  text-align: center;
+  background-color: #ffffff;
 }
