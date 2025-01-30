@@ -17,9 +17,9 @@ app.config.update(
 db_config = {
     'user': 'python',
     'password': 'Aula@123',
-    'host': 'adocaonimais.mysql.database.azure.com',
-    'port': '3306' ,
-    'database': 'adocaoanimais'
+    'host': 'adocaoanimais.mysql.database.azure.com',
+    'port': '3306',
+    'database': 'adocaoanimais',
 }
 
 @app.route('/')
