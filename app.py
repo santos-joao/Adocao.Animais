@@ -113,12 +113,9 @@ def mudar_senha():
 
     return render_template('mudar_senha.html')
 
-# Rota para fazer logout do sistema
 @app.route('/logout')
 def logout():
-    # Remove o usuário logado da sessão
     session.pop('usuario_logado', None)
-    # Redireciona para a página inicial (index)
     return redirect(url_for('index'))
 
 @app.route('/adotar')
@@ -127,7 +124,6 @@ def adotar():
 
 @app.route('/blog')
 def blog():
-    # Redireciona para a página inicial (index)
     return render_template('blog.html')
 
 @app.route('/config')
@@ -141,6 +137,3 @@ if __name__ == '__main__':
 # > cadastro
 # - email
 #   - email só é válido se tiver @ e se terminar com .com ou .com.br
-
-# > index
-# - mudar card ao lado do mapa
