@@ -1,11 +1,26 @@
 
 /* Contêiner do carrossel */
+.carousel {
+  overflow: hidden; /* Esconde a parte do conteúdo que ultrapassa o contêiner */
+  border-radius: 10px; /* Borda arredondada (opcional) */
+  margin-top: 20px; /* Espaçamento superior */
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+  gap: 20px; /* Espaço entre os elementos */
+  border-radius: 10px;
+
+
+}
 .carousel-fluid {
   overflow: hidden;
   margin-left: 100px;
   margin-right: 100px; 
   border-radius: 10px; 
   margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .carousel .card-text {
   text-align: center;
@@ -18,6 +33,9 @@
   overflow: hidden; /* Garante que a imagem não ultrapasse os limites do item */
   position: relative;
   border-radius: 10px; /* Borda arredondada (opcional) */
+  flex-wrap: wrap;
+  justify-content: center;
+
 }
 
 /* Imagens dentro do carrossel */
@@ -28,6 +46,9 @@
   max-height: auto; /* Altura máxima para evitar que a imagem fique muito grande */
   object-fit: cover; /* Mantém a proporção da imagem e cobre o espaço */
   border-radius: 10px; /* Borda arredondada (opcional) */ 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 
@@ -358,12 +379,15 @@ blockquote {
   background-color: #bfa5c5;
   border-radius: 10px;
   padding: 10px;
+  justify-content: center;
 }
 
 #container_adocao {
   background-image: url(img/Cards/patinhas.png);
  background-size: 100%;
-
+ align-content: center;
+ justify-content: center;
+ 
 }
 
 .card-animal img{
@@ -376,7 +400,7 @@ blockquote {
   overflow: hidden; 
   object-fit: cover;  /* isso aqui serve pra imagem caber certinho no carrossel, sem esticar. precisamos de imagens que sejam do mesmo tamanho */
   border-radius: 100px;
-
+  justify-content: center;
 }
 
 .list-group {
@@ -390,4 +414,14 @@ blockquote {
 #Nome_Adocao {
   text-align: center;
   background-color: #ffffff;
+}
+
+
+.col-md-4 {
+  display: flex;
+  justify-content: center;
+}
+
+.card-animal {
+  margin: 10px;
 }
