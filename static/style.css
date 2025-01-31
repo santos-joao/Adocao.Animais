@@ -1,33 +1,48 @@
+
 /* Contêiner do carrossel */
 .carousel-fluid {
-    overflow: hidden;
-    margin-left: 100px;
-    margin-right: 100px; 
-    border-radius: 10px; 
-    margin-top: 20px;
+  overflow: hidden;
+  margin-left: 100px;
+  margin-right: 100px; 
+  border-radius: 10px; 
+  margin-top: 20px;
+}
+.carousel .card-text {
+  text-align: center;
+    font-weight: bold;
   }
-  
-  /* Itens do carrossel */
-  .carousel-item {
-    width: 100%;  /* Defina a largura desejada dos itens */
-    height: 400px; /* Defina a altura dos itens */
-    overflow: hidden; /* Garante que a imagem não ultrapasse os limites do item */
-    position: relative;
-    border-radius: 10px; /* Borda arredondada (opcional) */
-  }
-  
-  /* Imagens dentro do carrossel */
-  .carousel-item img {
-    height: 100%;
-    object-fit: cover; /* Isso faz com que a imagem preencha todo o espaço sem distorcer */
-  }
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
+/* Itens do carrossel */
+.carousel-item {
+  width: 100%;  /* Defina a largura desejada dos itens */
+  height: 400px; /* Defina a altura dos itens */
+  overflow: hidden; /* Garante que a imagem não ultrapasse os limites do item */
+  position: relative;
+  border-radius: 10px; /* Borda arredondada (opcional) */
+}
+
+/* Imagens dentro do carrossel */
+
+.carousel .img-fluid {
+  width: 100%; /* Ocupa toda a largura do contêiner */
+  height: auto; /* Altura automática para manter a proporção */
+  max-height: auto; /* Altura máxima para evitar que a imagem fique muito grande */
+  object-fit: cover; /* Mantém a proporção da imagem e cobre o espaço */
+  border-radius: 10px; /* Borda arredondada (opcional) */ 
+}
+
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
     background-color: black; /* Cor preta */
     background-size: 50%;   /* Ajusta o tamanho do ícone */
     border-radius: 100%;/* Torna os ícones circulares (opcional) */
 
   }
+  
+  
+ 
+
 
 #Imagem_index {
   width: 100%; /* A imagem ocupa toda a largura do item */
